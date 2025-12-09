@@ -1,0 +1,17 @@
+@using MyWebApp.Models;
+
+@model Department
+
+@Html.DisplayNameFor(x => x.Id);
+@Html.DisplayFor(x => x.Id);
+
+@Html.DisplayNameFor(x => x.Name);
+@Html.DisplayFor(x => x.Name);
+
+<p>Id: @Model.Id</p>
+<p>Name: @Model.Name</p>
+
+<p>Id: @Model.Id</p>
+<p>@Html.DisplayNameFor(x => x.Name): @Model.Name</p>
+
+<a asp-controller="Department" asp-action="List">View all Departments</a>
