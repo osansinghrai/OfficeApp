@@ -11,6 +11,8 @@ namespace OfficeApp.Controllers
 
         private readonly IDepartmentService _departmentService;
 
+        private readonly ILogger<DepartmentController> _logger;
+
         public DepartmentController(AppDBContext context, IDepartmentService departmentService)
         {
             _context = context;
@@ -19,11 +21,13 @@ namespace OfficeApp.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Fetching departments");
              return View(_departmentService.GetAllDepartments());
         }
     
           public IActionResult Create()
         {
+            _logger.LogInformation("Creating the department page")
             return View();
         }
 
@@ -33,10 +37,12 @@ namespace OfficeApp.Controllers
             if (ModelState.IsValid)
             { 
                 _departmentService.CreateDepartment(department);
+                _logger.LogInformation("Department created successfully");
                 return RedirectToAction("Index");
             }
             else 
             {
+                _logger.LogWarning("Invalid data submitted");
                 return View(department);
             }
             
