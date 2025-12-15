@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using OfficeApp;
 using OfficeApp.Models;
 using OfficeApp.Services.Abstraction;
 
@@ -10,9 +6,10 @@ namespace OfficeApp.Services.Implementation
 {
     public class DepartmentService : IDepartmentService
     {
+
         private readonly AppDBContext _context;
 
-        public DepartmentService(AppDBContext context)
+        public DepartmentService(AppDBContext context) // Dependency Injection
         {
             _context = context;
         }
@@ -21,15 +18,17 @@ namespace OfficeApp.Services.Implementation
         {
             var result = _context.Departments.Add(department);
             _context.SaveChanges();
+
             return result.Entity;
+
         }
 
         public void DeleteDepartment(int Id)
         {
-            var department = _context.Departments.Find(Id);
-            if (department != null)
+            var result = _context.Departments.Find(Id);
+            if (result != null)
             {
-                _context.Departments.Remove(department);
+                _context.Departments.Remove(result);
                 _context.SaveChanges();
             }
         }
@@ -39,28 +38,23 @@ namespace OfficeApp.Services.Implementation
             return _context.Departments.ToList();
         }
 
-        public int GetAllDepartmentsCount()
+        public Department GetDepartmentById(int Id)
         {
-            return _context.Departments.Count();
+            return _context.Departments.Find(Id);
         }
 
-        public Department? GetDepartmentsById(int id)
+        public async Task<Department> GetDepartmentByIdAsync(int Id)
         {
-            return _context.Departments.Find(id);
+            return await _context.Departments.FindAsync(Id);
         }
 
-        // helper/alias
-        public Department? GetDepartmentById(int Id)
-        {
-            return GetDepartmentsById(Id);
-        }
-
-        public Department? UpdateDepartment(Department department)
+        public Department UpdateDepartment(Department department)
         {
             try
             {
-                var result = _context.Departments.Update(department);
+                var result= _context.Departments.Update(department);
                 _context.SaveChanges();
+
                 return result.Entity;
             }
             catch (DbUpdateConcurrencyException)
@@ -71,11 +65,12 @@ namespace OfficeApp.Services.Implementation
                 }
                 else
                 {
-                     throw;
+                    var result = _context.Departments.Update(department);
+                    _context.SaveChanges();
+
+                    return result.Entity;
                 }
             }
         }
-
-    
-  }
+    }
 }

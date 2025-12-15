@@ -10,6 +10,8 @@ namespace OfficeApp.Services.Abstraction
     int GetAllDepartmentsCount();
     Department? GetDepartmentsById(int id);
 
+    Task<Department> GetDepartmentByIdAsync(int id);
+
     Department CreateDepartment(Department department);
     Department? UpdateDepartment(Department department);
 
