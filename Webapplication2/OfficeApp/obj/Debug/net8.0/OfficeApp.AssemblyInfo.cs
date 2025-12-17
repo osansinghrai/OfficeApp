@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OfficeApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9be3164dae90f99192cb2ccfc9bc225079bd6bc9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99fab0a3d2ff5c8ce0c7b3afeb93a9edc970d995")]
 [assembly: System.Reflection.AssemblyProductAttribute("OfficeApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OfficeApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using OfficeApp.Models;
 using OfficeApp.Services.Abstraction;
 namespace OfficeApp.Controllers
@@ -13,10 +14,11 @@ namespace OfficeApp.Controllers
 
         private readonly ILogger<DepartmentController> _logger;
 
-        public DepartmentController(AppDBContext context, IDepartmentService departmentService)
+        public DepartmentController(AppDBContext context, IDepartmentService departmentService, ILogger<DepartmentController> logger)
         {
             _context = context;
             _departmentService = departmentService;
+            _logger = logger;
         }
 
         public IActionResult Index()
@@ -25,9 +27,9 @@ namespace OfficeApp.Controllers
              return View(_departmentService.GetAllDepartments());
         }
     
-          public IActionResult Create()
+        public IActionResult Create()
         {
-            _logger.LogInformation("Creating the department page")
+            _logger.LogInformation("Creating the department page");
             return View();
         }
 

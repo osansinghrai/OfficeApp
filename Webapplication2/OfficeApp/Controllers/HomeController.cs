@@ -15,6 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        Console.WriteLine(HttpContext.User.Identity.IsAuthenticated);
         _logger.LogInformation("Index of home is called");
         return View();
     }

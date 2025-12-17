@@ -38,6 +38,16 @@ namespace OfficeApp.Services.Implementation
             return _context.Departments.ToList();
         }
 
+        public int GetAllDepartmentsCount()
+        {
+            return _context.Departments.Count();
+        }
+
+        public Department? GetDepartmentsById(int Id)
+        {
+            return _context.Departments.Find(Id);
+        }
+
         public Department GetDepartmentById(int Id)
         {
             return _context.Departments.Find(Id);
