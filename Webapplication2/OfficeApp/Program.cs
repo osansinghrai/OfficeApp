@@ -15,9 +15,21 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(x => 
+{
+    x.Password.RequireDigit = true;
+    x.Password.RequiredLength = 8;
+    x.Password.RequireNonAlphanumeric = false;
+    x.Password.RequireUppercase = true;
+    x.Password.RequireLowercase = false;
+    
+})
+    .AddEntityFrameworkStores<AppDBContext>()
+    .AddDefaultTokenProviders();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP requet pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

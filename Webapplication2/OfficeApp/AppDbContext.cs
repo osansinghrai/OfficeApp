@@ -3,7 +3,7 @@ using OfficeApp.Models;
 
 namespace OfficeApp
 {
-    public class AppDBContext: DbContext
+    public class AppDBContext: IdentityDbContext
     {
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {
