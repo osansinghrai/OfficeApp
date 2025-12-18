@@ -3,17 +3,14 @@ using OfficeApp.Models;
 
 namespace OfficeApp
 {
-    public class AppDBContext: IdentityDbContext
+    public class AppDBContext : DbContext
     {
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {
-            
-        
+        }
+
+        public DbSet<Department> Departments { get; set; } = null!;
+
+        public DbSet<Employee> Employees { get; set; } = null!;
     }
-    public DbSet<Department> Departments { get; set; }
-
-    public DbSet<Employee> Employees { get; set; }
-    
-
-}
 }

@@ -126,3 +126,4 @@
 /home/osanrai/Documents/osan/C--Project-OfficeApp/Webapplication2/OfficeApp/obj/Debug/net8.0/OfficeApp.pdb
 /home/osanrai/Documents/osan/C--Project-OfficeApp/Webapplication2/OfficeApp/obj/Debug/net8.0/OfficeApp.genruntimeconfig.cache
 /home/osanrai/Documents/osan/C--Project-OfficeApp/Webapplication2/OfficeApp/obj/Debug/net8.0/ref/OfficeApp.dll
+/home/osanrai/Documents/osan/C--Project-OfficeApp/Webapplication2/OfficeApp/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

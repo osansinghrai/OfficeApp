@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using OfficeApp;
 using OfficeApp.Services.Abstraction;
 using OfficeApp.Services.Implementation;
@@ -22,10 +24,15 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(x =>
     x.Password.RequireNonAlphanumeric = false;
     x.Password.RequireUppercase = true;
     x.Password.RequireLowercase = false;
-    
 })
     .AddEntityFrameworkStores<AppDBContext>()
     .AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.LogoutPath = "/Account/Logout";
+});
 
 var app = builder.Build();
 

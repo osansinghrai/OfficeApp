@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Vx+mTXLNaZdGDkDQWByPV42ygYvQuJan9FqQwH1AJllc9Fc/6vzPDNIiUFivTHMVL+cmsd4N0pl9BmMFQdzHdA==",
+  "dgSpecHash": "oqLVkto400woaab3SzKSnR/MaKHGvmNUCxKGypkYWrhPf1+uFjUTVEjnvpuMBpfFLsoLQYz1u7T3rVhmcuBlJg==",
   "success": true,
   "projectFilePath": "/home/osanrai/Documents/osan/C--Project-OfficeApp/Webapplication2/OfficeApp/OfficeApp.csproj",
   "expectedPackageFiles": [
     "/home/osanrai/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/home/osanrai/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.0/microsoft.aspnetcore.cryptography.internal.8.0.0.nupkg.sha512",
+    "/home/osanrai/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.0/microsoft.aspnetcore.cryptography.keyderivation.8.0.0.nupkg.sha512",
+    "/home/osanrai/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/8.0.0/microsoft.aspnetcore.identity.entityframeworkcore.8.0.0.nupkg.sha512",
     "/home/osanrai/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/home/osanrai/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "/home/osanrai/.nuget/packages/microsoft.codeanalysis.common/4.5.0/microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
@@ -27,6 +30,8 @@
     "/home/osanrai/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "/home/osanrai/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/home/osanrai/.nuget/packages/microsoft.extensions.dependencymodel/8.0.0/microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
+    "/home/osanrai/.nuget/packages/microsoft.extensions.identity.core/8.0.0/microsoft.extensions.identity.core.8.0.0.nupkg.sha512",
+    "/home/osanrai/.nuget/packages/microsoft.extensions.identity.stores/8.0.0/microsoft.extensions.identity.stores.8.0.0.nupkg.sha512",
     "/home/osanrai/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "/home/osanrai/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/home/osanrai/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
